@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 const BackGroundOverlayContainer = styled.div`
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: 0;
     padding: 0;
+    z-index: -1;
 `;
 
 const BackgroundPhotoContainer1 = styled.div`

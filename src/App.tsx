@@ -1,14 +1,21 @@
-import './App.css';
-import {fetchSirvToken} from "./service/ImageService";
 import {Provider} from "react-redux";
 import store, { history } from './store/configureStore';
-import BackgroundOverlay from "./components/background-overlay/BackgroundOverlay";
+import {ConnectedRouter} from "connected-react-router";
+import Routes from "./Routes";
+import styled from "styled-components";
+
+const AppContent = styled.div`
+    width: 100vw;
+    height: 100vh;
+`;
 
 export default (
     <Provider store={store as any}>
-        <div className="App">
-            <BackgroundOverlay/>
-        </div>
+        <ConnectedRouter history={history as any}>
+            <AppContent>
+                <Routes/>
+            </AppContent>
+        </ConnectedRouter>
     </Provider>
    
   );

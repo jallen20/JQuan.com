@@ -3,8 +3,8 @@ import { createLogger } from 'redux-logger';
 import { createBrowserHistory } from 'history';
 import { routerMiddleware } from 'connected-react-router';
 import { createStore, applyMiddleware, compose } from 'redux';
-import {initialState} from "../ducks/initialState";
 import rootReducer from "./rootReducer";
+import initialState from "./initialState";
 
 
 declare const window: any;
