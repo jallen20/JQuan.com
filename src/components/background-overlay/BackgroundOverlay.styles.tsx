@@ -9,12 +9,24 @@ const BackGroundOverlayContainer = styled.div`
     margin: 0;
     padding: 0;
     z-index: -1;
+    
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 `;
 
 const BackgroundPhotoContainer1 = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+    
+    @media screen and (max-width: 1000px) {
+        position: relative;
+        align-self: center;
+        margin: none;
+    }
 `;
 
 const BackgroundPhotoContainer2 = styled.div`
@@ -22,6 +34,12 @@ const BackgroundPhotoContainer2 = styled.div`
     bottom: 0;
     left: 0;
     transform: rotate(180deg);
+    
+   @media screen and (max-width: 1000px) {
+        position: relative;
+        align-self: center;
+        margin: none;
+    }
 `;
 
 export {

@@ -11,6 +11,10 @@ const HeaderContainer = styled.div`
 
 const Logo = styled.img`
     width: 60px;
+    
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
 `;
 
 export {
