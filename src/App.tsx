@@ -1,21 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import {fetchSirvToken} from "./service/ImageService";
+import {Provider} from "react-redux";
+import store, { history } from './store/configureStore';
+import BackgroundOverlay from "./components/background-overlay/BackgroundOverlay";
 
 export default (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store as any}>
+        <div className="App">
+            <BackgroundOverlay/>
+        </div>
+    </Provider>
+   
   );
